@@ -1,11 +1,28 @@
-# tRPC with Next.js, TypeScript & Prisma
+Overview:
 
-## Why you should be learning & using tRPC
-* Making E2E type-safe APIs is fun and easy
-* Gives you a deeper understanding of Next.js 
-* Going to be very popular (prediction)
+This is a tRPC, TypeScript, Next.js, Prisma, Railway & Zod app That allows user to login and create blog post with end to end type safety. It's an extension of the TomDoesTech's building a t3 blog tutorial
+
+Tutorial:
+https://www.youtube.com/watch?v=syEWlxVFUrY&t=2770s
 
 
+Extended:
+
+I've extend the demos work by deploying the app and including Sendgrid to send user live emails to login. 
+
+
+Running local
+```sh
+copy .env.example .env
+## Add your own variables in .env
+npm install
+npm run dev
+```
+
+
+
+
+Digram
 <img src="./diagram.png" width="500px"/>
 
 ## Technologies used
@@ -13,7 +30,8 @@
 * TypeScript
 * Prisma (Postgres)
 * Zod - Schema validation & type generation
-* nodemailer - Sending OTP emails
+* nodemailer - Sending OTP emails preview
+* Sendgrid - Sending live OTP emails preview
 
 ## Features
 * Register user
@@ -22,50 +40,19 @@
 * View a post
 * List posts
 
-## What will you learn?
-* Enough tRPC to be productive
-* Using Next.js as a monorepo
-* Some TypeScript
-* OPT login flow
 
-## What you will need
-* A running instance of a DB (Postgres, Mongo, SQLlite, MYSQL) - Postgres
+## Next steps:
 
-## Video structure
-1. Demo
-2. Code walk-through
+1: Design: The current design is pretty bare bones, I'm planning on adding next-themes and redsigning all of pages
 
-3. Bootstrap application
-    - Create app router
-    - Create router base
-    - Configure _app.tsx
-    - Make a request
-    - Configure prisma
-4. Register user
-    - Create a user model
-    - Create register user schema
-    - Configure user router
-    - Register user resolver
-    - Register UI
-5. User login
-    - Add login token to prisma
-    - Login schema
-    - Configure mailer
-    - Verify login schema
-    - Login resolver
-    - Verify login resolver
-    - Login UI
-6. Create post
-    - Add post to prisma
-    - Create post router
-    - Create post resolver
-    - Create post UI
-7. List posts
-    - List posts resolver
-    - List posts UI
-8. View single post
-    - Query post schema
-    - Query post resolver
-    - Post UI
-# web3wes-blog
-# web3wes-blog
+2: Like, Comment, and Subcribe... no really: I think being able to post is cool, but I'd be cooler if you could notified when a blogger you follow post something, or if you could comment on post, like on medium. Those are soe of the next steps. 
+
+3: Auth updates: 
+- There isn't a way to log out, that will be in later version 
+- OTP isn't a bad auth option, but I'd like to extend it with something like Next Auth or a socail auth tool like Auth0.
+
+
+
+
+
+
