@@ -50,7 +50,11 @@ function PostListingPage() {
                 <button onClick={() => onModalOpen(post)}>Edit post</button>
               </article>
 
-              <Modal onClose={() => setShowModal(false)} show={showModal}>
+              <Modal
+                onClose={() => setShowModal(false)}
+                show={showModal}
+                title={"Edit Post Modal"}
+              >
                 <form onSubmit={handleSubmit(onSubmit)}>
                   {error && error.message}
 
